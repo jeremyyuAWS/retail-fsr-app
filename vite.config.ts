@@ -19,6 +19,9 @@ export default defineConfig({
     commonjsOptions: {
       include: [/regenerator-runtime/],
       esmExternals: true
-    }
+    },
+    rollupOptions: {
+      external: ['react', 'react-dom', 'lucide-react'],
+    },
   }
 });
