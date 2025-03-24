@@ -2,7 +2,70 @@
 
 [Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/jeremyyuAWS/retail-fsr-app)
 
+## Local Development and Testing
+
+### Running the App Locally
+
+1. **Start Development Server**
+   - Run the app in development mode with hot-reload:
+   ```bash
+   npm run dev
+   ```
+   - This will start the development server, typically at http://localhost:5173
+
+2. **Build for Production**
+   - Create an optimized production build:
+   ```bash
+   npm run build
+   ```
+   - This generates static files in the `dist` directory
+
+3. **Preview Production Build**
+   - Test the production build locally:
+   ```bash
+   npm run preview
+   ```
+   - This serves the production build, typically at http://localhost:4173
+
+### Testing with Netlify
+
+1. **Install Netlify CLI** (if not already installed)
+   ```bash
+   npm install netlify-cli -g
+   ```
+
+2. **Test Netlify Deployment Locally**
+   ```bash
+   netlify dev
+   ```
+   - This simulates the Netlify production environment locally
+
+3. **Create a Production Build and Test with Netlify**
+   ```bash
+   npm run build
+   netlify deploy --dir=dist
+   ```
+   - This creates a draft deployment you can preview before publishing
+
 ## Troubleshooting
+
+### Local Build Issues
+
+If you encounter issues with the local development or build process:
+
+1. **Check Node.js Version**
+   - Ensure you're using a compatible Node.js version
+   - This project works best with Node.js 16.x or later
+
+2. **Verify Environment Variables**
+   - Make sure all required environment variables are set
+   - For local development, create a `.env` file based on `.env.example`
+
+3. **Port Conflicts**
+   - If you see "Port already in use" errors, change the port:
+   ```bash
+   npm run dev -- --port=3000
+   ```
 
 ### Build Error with lucide-react
 
