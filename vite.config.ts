@@ -9,6 +9,7 @@ export default defineConfig({
     include: ['regenerator-runtime/runtime']
   },
   build: {
+    outDir: 'dist',
     commonjsOptions: {
       include: [/regenerator-runtime/]
     }

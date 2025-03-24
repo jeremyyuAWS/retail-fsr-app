@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# (Optional) If using environment variables, add a [build.environment] section here.
+# [build.environment]
+#   NODE_ENV = "production"
+
+# (Optional) Add redirect rules if needed, for example for SPA fallback:
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
