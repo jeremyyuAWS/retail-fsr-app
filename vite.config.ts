@@ -12,7 +12,7 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ['regenerator-runtime/runtime']
+    include: ['regenerator-runtime/runtime', 'lucide-react']
   },
   build: {
     outDir: 'dist',
@@ -21,7 +21,7 @@ export default defineConfig({
       esmExternals: true
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'lucide-react'],
+      external: ['react', 'react-dom'],
     },
   }
 });
